@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  WebServiceStartUp
+//
+//  Created by Okan Kurtulus on 04/09/15.
+//  Copyright (c) 2015 Okan Kurtulus. All rights reserved.
+//
+
+#ifndef WebServiceStartUp_PrefixHeader_pch
+#define WebServiceStartUp_PrefixHeader_pch
+
+#pragma mark - NSLOG Definition
+
+#ifdef DEBUG
+#   define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#   define NSLog(...)
+#endif
+
+#pragma mark - Localized Text Definition
+
+#define LOC(__key, __comment) \
+NSLocalizedStringFromTable(\
+(__key),@"Strings",(__comment))
+
+#endif
